@@ -10,7 +10,7 @@ let router = null;
 function render(props: any) {
 	const { container } = props;
 	router = createRouter({
-		history: createWebHistory(`/subapp/vue3-demo/`),
+		history: createWebHistory(`/vue3-demo/`),
 		routes
 	});
 
