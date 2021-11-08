@@ -1,7 +1,7 @@
+import "./public-path";
 import { createApp } from "vue";
 import App from "./App.vue";
 import routes from "./router";
-import "./public-path";
 import { createRouter, createWebHistory } from "vue-router";
 
 const app = createApp(App);
