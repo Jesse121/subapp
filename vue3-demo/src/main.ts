@@ -6,15 +6,18 @@ import { createRouter, createWebHistory } from "vue-router";
 
 const app = createApp(App);
 
-let router = null;
+let instance = null;
+
 function render(props: any) {
 	const { container } = props;
-	router = createRouter({
+	const router = createRouter({
 		history: createWebHistory(`/vue3-demo/`),
 		routes
 	});
 
-	app.use(router).mount(container ? container.querySelector("#app") : "#app");
+	instance = createApp(App)
+		.use(router)
+		.mount(container ? container.querySelector("#app") : "#app");
 }
 
 // 独立运行时
@@ -41,6 +44,6 @@ export async function mount(props: any) {
  * unmount ：应用每次 切出/卸载 均会调用
  */
 export async function unmount() {
-	console.log("unmount");
-	app.unmount();
+	// console.log("unmount");
+	// app.unmount();
 }
