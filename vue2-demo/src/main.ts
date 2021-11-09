@@ -19,7 +19,7 @@ function render(props = {}) {
 		routes: routes as any
 	});
 
-	console.log("[subapp-test] 主应用传递 props", props);
+	console.log("主应用传递 props", props);
 	instance = new Vue({
 		router,
 		render: h => h(App)
@@ -31,11 +31,11 @@ if (!(window as any).__POWERED_BY_QIANKUN__) {
 }
 
 export async function bootstrap() {
-	console.log("[subapp-test] vue app bootstraped");
+	console.log("vue app bootstraped");
 }
 
 export async function mount(props: any) {
-	console.log("[subapp-test] props from main framework", props);
+	console.log("props from main framework", props);
 	render(props);
 }
 
