@@ -12,6 +12,6 @@ const goSubApp = () => {
 };
 
 const goMain = () => {
-	history.pushState(null, "home", "/home");
+	history.pushState(null, "index", "/index");
 };
 </script>

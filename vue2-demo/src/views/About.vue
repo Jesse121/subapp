@@ -11,7 +11,7 @@ export default Vue.extend({
 	name: "Home",
 	methods: {
 		goMain() {
-			history.pushState(null, "home", "/home");
+			history.pushState(null, "index", "/index");
 		}
 	}
 });
